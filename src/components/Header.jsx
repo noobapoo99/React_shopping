@@ -5,9 +5,9 @@ const Home = () => {
   return (
     <div className="navbar 	bg-primary-content text-primary">
       <div className="flex-1">
-        <a className="btn btn-ghost text-xl">
-          <Link to="/">Shopping</Link>
-        </a>
+        <Link to="/" className="btn btn-ghost text-xl">
+          Shopping
+        </Link>
       </div>
 
       <div className="flex-none gap-2">

@@ -1,6 +1,6 @@
 import React from "react";
 
-function SingleProduct({ prod }) {
+function SingleProduct({ prod, cart, setCart }) {
   return (
     <div className="card bg-base-100 w-96 shadow-xl product">
       <figure>
@@ -10,7 +10,25 @@ function SingleProduct({ prod }) {
         <h2 className="card-title">{prod.name}</h2>
         <span>Rs.{prod.price.substring(0, 3)}</span>
         <div className="card-actions justify-end">
-          <button className="btn btn-primary">Add To Cart</button>
+          {cart.includes(prod) ? (
+            <button
+              className="btn btn-primary"
+              onClick={() => {
+                setCart(cart.filter((c) => c.id !== prod.id));
+              }}
+            >
+              Remove From Cart
+            </button>
+          ) : (
+            <button
+              className="btn btn-primary"
+              onClick={() => {
+                setCart([...cart, prod]);
+              }}
+            >
+              Add To Cart
+            </button>
+          )}
         </div>
       </div>
     </div>
