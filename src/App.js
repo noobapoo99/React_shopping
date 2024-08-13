@@ -11,11 +11,8 @@ function App() {
       <Header />
       <div className="App">
         <Routes>
-          <Route path="/" element={<Home cart={cart} setCart={setCart} />} />
-          <Route
-            path="/cart"
-            element={<Cart cart={cart} setCart={setCart} />}
-          />
+          <Route path="/" element={<Home />} />
+          <Route path="/cart" element={<Cart />} />
         </Routes>
       </div>
     </BrowserRouter>
