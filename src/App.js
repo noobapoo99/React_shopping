@@ -6,8 +6,6 @@ import Cart from "./components/Cart.js";
 import { useState } from "react";
 
 function App() {
-  const [cart, setCart] = useState([]);
-
   return (
     <BrowserRouter>
       <Header />
