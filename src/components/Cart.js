@@ -1,11 +1,18 @@
+import { useEffect, useState } from "react";
 import SingleProduct from "./SingleProduct.js";
 
 const Cart = ({ cart, setCart }) => {
+  const [total, setTotal] = useState();
+
+  useEffect(() => {
+    setTotal(cart.reduce((acc, curr) => acc + Number(curr.price), 0));
+  }, [cart]);
+
   return (
     <div>
       <span>My Cart</span>
       <br />
-      <span>Total : Rs.200</span>
+      <span>Total : Rs.{total}</span>
       <div className="productContainer">
         {cart.map((prod) => (
           <SingleProduct
