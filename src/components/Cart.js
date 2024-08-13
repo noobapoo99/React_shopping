@@ -1,5 +1,12 @@
 const Cart = () => {
-  return <div>Cart</div>;
+  return (
+    <div>
+      <span>My Cart</span>
+      <br />
+      <span>Total : Rs.200</span>
+      <div className="productContainer"></div>
+    </div>
+  );
 };
 
 export default Cart;
