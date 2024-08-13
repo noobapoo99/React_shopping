@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import { CartContext } from "../Context";
 
-function SingleProduct({ prod, cart, setCart }) {
+function SingleProduct({ prod }) {
+  const { cart, setCart } = useContext(CartContext);
+
   return (
     <div className="card bg-base-100 w-96 shadow-xl product">
       <figure>
