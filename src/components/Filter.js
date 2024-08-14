@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import "./filter.css";
+import Rating from "./Rating";
 function Filters() {
+  const [rate, setRate] = useState(1);
+
   return (
     <div className="fil">
       <ul className="menu bg-base-200 rounded-box w-56">
@@ -33,19 +36,8 @@ function Filters() {
         </li>
         <li>
           <span>
-            Rating
-            <div className="rating">
-              <input type="radio" name="rating-1" className="mask mask-star" />
-              <input
-                type="radio"
-                name="rating-1"
-                className="mask mask-star"
-                defaultChecked
-              />
-              <input type="radio" name="rating-1" className="mask mask-star" />
-              <input type="radio" name="rating-1" className="mask mask-star" />
-              <input type="radio" name="rating-1" className="mask mask-star" />
-            </div>
+            <label> Rating</label>
+            <Rating rating={rate} onClick={(i) => setRate(i)} />
           </span>
         </li>
         <li>
