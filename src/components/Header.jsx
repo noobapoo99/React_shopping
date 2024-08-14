@@ -14,7 +14,7 @@ const Home = () => {
       </div>
 
       <div className="flex-none gap-2">
-        <div className="flex-1">
+        <div className="flex-1 dropdown">
           <Link to="/cart" className="btn btn-ghost text-xl">
             <div className="indicator">
               <svg
@@ -36,6 +36,18 @@ const Home = () => {
               </span>
             </div>
           </Link>
+          <ul className="menu dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+            <li>
+              <Link to="/cart" className="btn btn-ghost text-xl">
+                View Cart
+              </Link>
+            </li>
+            <li>
+              <Link to="/checkout" className="btn btn-ghost text-xl">
+                Checkout
+              </Link>
+            </li>
+          </ul>
         </div>
         <div className="form-control">
           <input
