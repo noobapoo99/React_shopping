@@ -22,7 +22,7 @@ function SingleProduct({ prod }) {
         <div className="card-actions justify-end ">
           {cart.includes(prod) ? (
             <button
-              className="btn btn sec"
+              className="btn sec"
               onClick={() => {
                 setCart(cart.filter((c) => c.id !== prod.id));
               }}
@@ -31,7 +31,7 @@ function SingleProduct({ prod }) {
             </button>
           ) : (
             <button
-              className="btn btn sec"
+              className="btn sec"
               onClick={() => {
                 setCart([...cart, prod]);
               }}

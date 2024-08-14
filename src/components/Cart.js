@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../Context.js";
-
+import "./cart.css";
 const Cart = () => {
   const [total, setTotal] = useState(0);
 
@@ -105,7 +105,7 @@ const Cart = () => {
         <span>Total: Rs.{total}</span>
         <div className="mt-4">
           <button
-            className="btn btn-primary"
+            className="btn  checkout"
             onClick={handleCheckout}
             disabled={cart.length === 0}
           >

@@ -52,15 +52,15 @@ function Filters() {
   };
 
   return (
-    <div className="fil">
-      <ul className="menu bg-base-200 rounded-box w-56">
+    <div className="">
+      <ul className="menu bg-base-200 rounded-box w-56 fil">
         <li className="menu-title">Filter</li>
         <li>
           <span>
             <input
               type="radio"
               name="sort-order"
-              className="radio"
+              className="radio sec"
               checked={sortOrder === "ascending"}
               onChange={() => setSortOrder("ascending")}
             />
@@ -72,7 +72,7 @@ function Filters() {
             <input
               type="radio"
               name="sort-order"
-              className="radio"
+              className="radio sec"
               checked={sortOrder === "descending"}
               onChange={() => setSortOrder("descending")}
             />
@@ -83,7 +83,7 @@ function Filters() {
           <span>
             <input
               type="checkbox"
-              className="checkbox"
+              className="checkbox sec"
               checked={includeOutOfStock}
               onChange={() => setIncludeOutOfStock(!includeOutOfStock)}
             />
@@ -94,7 +94,7 @@ function Filters() {
           <span>
             <input
               type="checkbox"
-              className="checkbox"
+              className="checkbox sec"
               checked={fastDelivery}
               onChange={() => setFastDelivery(!fastDelivery)}
             />
@@ -108,12 +108,12 @@ function Filters() {
           </span>
         </li>
         <li>
-          <button className="btn" onClick={applyFilters}>
+          <button className="btn sec" onClick={applyFilters}>
             Apply Filters
           </button>
         </li>
         <li>
-          <button className="btn" onClick={clearFilters}>
+          <button className="btn sec" onClick={clearFilters}>
             Clear Filters
           </button>
         </li>
