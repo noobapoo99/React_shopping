@@ -1,21 +1,21 @@
 import React, { useContext } from "react";
 import { CartContext } from "../Context";
-
+import "./singleProduct.css";
 function SingleProduct({ prod }) {
   const { cart, setCart } = useContext(CartContext);
 
   return (
-    <div className="card bg-base-100 w-96 shadow-xl product">
+    <div className="card bg-base-100 w-96 shadow-xl product crd">
       <figure>
         <img src={prod.image} alt={prod.name} />
       </figure>
       <div className="card-body">
         <h2 className="card-title">{prod.name}</h2>
         <span>Rs.{prod.price.substring(0, 3)}</span>
-        <div className="card-actions justify-end">
+        <div className="card-actions justify-end ">
           {cart.includes(prod) ? (
             <button
-              className="btn btn-primary"
+              className="btn btn sec"
               onClick={() => {
                 setCart(cart.filter((c) => c.id !== prod.id));
               }}
@@ -24,7 +24,7 @@ function SingleProduct({ prod }) {
             </button>
           ) : (
             <button
-              className="btn btn-primary"
+              className="btn btn sec"
               onClick={() => {
                 setCart([...cart, prod]);
               }}

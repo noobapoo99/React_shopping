@@ -1,25 +1,26 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from "../Context";
+import "./Header.css";
 
 const Home = () => {
   const { cart } = useContext(CartContext);
 
   return (
-    <div className="navbar 	bg-primary-content text-primary">
+    <div className="navbar 	bg text-primary nav">
       <div className="flex-1">
         <Link to="/" className="btn btn-ghost text-xl">
-          Shopping
+          <span className="txt">Shopping</span>
         </Link>
       </div>
 
       <div className="flex-none gap-2">
         <div className="flex-1 dropdown">
-          <Link to="/cart" className="btn btn-ghost text-xl">
+          <Link className="btn btn-ghost text-xl">
             <div className="indicator">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5"
+                className="h-5 w-5 txt"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -38,12 +39,12 @@ const Home = () => {
           </Link>
           <ul className="menu dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
             <li>
-              <Link to="/cart" className="btn btn-ghost text-xl">
+              <Link to="/cart" className="btn btn-ghost text-xl txt">
                 View Cart
               </Link>
             </li>
             <li>
-              <Link to="/checkout" className="btn btn-ghost text-xl">
+              <Link to="/cart" className="btn btn-ghost text-xl txt">
                 Checkout
               </Link>
             </li>
