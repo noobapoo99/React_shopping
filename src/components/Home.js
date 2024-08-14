@@ -1,19 +1,10 @@
-import React, { useContext, useState } from "react";
-import { faker } from "@faker-js/faker";
+import React, { useContext } from "react";
+import { CartContext } from "../Context";
 import SingleProduct from "./SingleProduct";
 import "./Product.css";
 
-faker.seed(100);
 const Home = () => {
-  const productsArray = [...Array(20)].map(() => ({
-    id: faker.string.uuid(),
-    name: faker.commerce.productName(),
-    price: faker.commerce.price(),
-    image: faker.image.url({ category: "business" }),
-  }));
-  //console.log(productsArray);
-
-  const [products] = useState(productsArray);
+  const { products } = useContext(CartContext); // Access products from context
 
   return (
     <div className="homePage">
