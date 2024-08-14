@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { CartContext } from "../Context";
 import "./singleProduct.css";
+import Rating from "./Rating";
 function SingleProduct({ prod }) {
   const { cart, setCart } = useContext(CartContext);
 
@@ -11,7 +12,13 @@ function SingleProduct({ prod }) {
       </figure>
       <div className="card-body">
         <h2 className="card-title">{prod.name}</h2>
-        <span>Rs.{prod.price.substring(0, 3)}</span>
+        <span>Rs.{prod.price.split(".")[0]}</span>
+        {prod.fastDelivery ? (
+          <div>fast Delivery</div>
+        ) : (
+          <div>4 Days Delivery</div>
+        )}
+        <Rating rating={prod.ratings} />
         <div className="card-actions justify-end ">
           {cart.includes(prod) ? (
             <button
@@ -28,8 +35,9 @@ function SingleProduct({ prod }) {
               onClick={() => {
                 setCart([...cart, prod]);
               }}
+              disabled={!prod.inStock}
             >
-              Add To Cart
+              {!prod.inStock ? "Out of Stock" : "Add To Cart"}
             </button>
           )}
         </div>

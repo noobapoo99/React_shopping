@@ -4,7 +4,7 @@ import Header from "./components/Header.jsx";
 import Home from "./components/Home.js";
 import Cart from "./components/Cart.js";
 import { useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
+//import "bootstrap/dist/css/bootstrap.min.css";
 function App() {
   return (
     <BrowserRouter>
