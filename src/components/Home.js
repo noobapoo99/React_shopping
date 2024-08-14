@@ -1,10 +1,14 @@
 import React, { useContext } from "react";
-import { CartContext } from "../Context";
+import { CartContext, CartState } from "../Context";
 import SingleProduct from "./SingleProduct";
 import "./Product.css";
 
 const Home = () => {
-  const { products } = useContext(CartContext); // Access products from context
+  // const { products } = useContext(CartContext);
+  const {
+    state: { products },
+  } = CartState();
+  console.log(products);
 
   return (
     <div className="homePage">
