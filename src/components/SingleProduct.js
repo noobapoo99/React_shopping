@@ -18,7 +18,7 @@ function SingleProduct({ prod }) {
         ) : (
           <div>4 Days Delivery</div>
         )}
-        <Rating rating={prod.ratings} />
+        <Rating rating={prod.ratings} disabled={true} />
         <div className="card-actions justify-end ">
           {cart.includes(prod) ? (
             <button

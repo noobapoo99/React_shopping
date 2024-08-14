@@ -1,10 +1,15 @@
+import React from "react";
 import { AiFillStar, AiOutlineStar } from "react-icons/ai";
 
-const Rating = ({ rating, onClick, style }) => {
+const Rating = ({ rating, onClick, style, disabled }) => {
   return (
-    <div style={{ display: "flex", ...style }}>
+    <div className="rating">
       {[...Array(5)].map((_, i) => (
-        <span key={i} onClick={() => onClick(i + 1)} style={style}>
+        <span
+          key={i}
+          onClick={!disabled ? () => onClick(i) : undefined}
+          style={style}
+        >
           {rating > i ? (
             <AiFillStar fontSize="15px" />
           ) : (
