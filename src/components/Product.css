@@ -1,9 +1,9 @@
 .homePage {
   background-color: black;
+  display: flex;
 }
 .productContainer {
   display: flex;
-  padding: 20px;
 
   flex-wrap: wrap;
   justify-content: space-evenly;
