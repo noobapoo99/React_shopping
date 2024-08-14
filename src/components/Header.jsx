@@ -44,14 +44,14 @@ const Home = () => {
           </Link>
           <ul className="menu dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
             <li>
-              <Link to="/cart" className="btn btn-ghost text-xl txt">
+              <Link to="/cart" className="btn btn-ghost text-xl txt_1">
                 View Cart
               </Link>
             </li>
             <li>
               <Link
                 to="/cart"
-                className="btn btn-ghost text-xl txt"
+                className="btn btn-ghost text-xl txt_1"
                 onClick={handleCheckout}
                 disabled={cart.length === 0}
               >

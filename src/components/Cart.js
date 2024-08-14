@@ -1,9 +1,9 @@
 import { useContext, useEffect, useState } from "react";
 import { CartContext } from "../Context.js";
 import "./cart.css";
+
 const Cart = () => {
   const [total, setTotal] = useState(0);
-
   const { cart, setCart } = useContext(CartContext);
 
   useEffect(() => {
@@ -33,7 +33,7 @@ const Cart = () => {
   };
 
   return (
-    <div className="cart-container flex flex-col md:flex-row gap-4 p-4">
+    <div className="cart-container flex flex-col md:flex-row gap-4 w-full min-h-screen p-4 main_bg">
       {/* Table section */}
       <div className="flex-1 overflow-x-auto">
         <table className="table w-full">
@@ -100,12 +100,12 @@ const Cart = () => {
       </div>
 
       {/* Summary section */}
-      <div className="flex-1">
+      <div className="summary-section w-full md:w-1/4 md:ml-auto check_pd">
         <h2 className="text-xl font-bold mb-4">My Cart</h2>
         <span>Total: Rs.{total}</span>
         <div className="mt-4">
           <button
-            className="btn  checkout"
+            className="btn checkout"
             onClick={handleCheckout}
             disabled={cart.length === 0}
           >
