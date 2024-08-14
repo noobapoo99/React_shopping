@@ -4,7 +4,12 @@ import { CartContext } from "../Context";
 import "./Header.css";
 
 const Home = () => {
-  const { cart } = useContext(CartContext);
+  const { cart, setCart } = useContext(CartContext);
+  // const { cart, setCart } = useContext(CartContext);
+  const handleCheckout = () => {
+    setCart([]); // Clears the cart
+    alert("Thank you for your purchase!");
+  };
 
   return (
     <div className="navbar 	bg text-primary nav">
@@ -44,7 +49,12 @@ const Home = () => {
               </Link>
             </li>
             <li>
-              <Link to="/cart" className="btn btn-ghost text-xl txt">
+              <Link
+                to="/cart"
+                className="btn btn-ghost text-xl txt"
+                onClick={handleCheckout}
+                disabled={cart.length === 0}
+              >
                 Checkout
               </Link>
             </li>
