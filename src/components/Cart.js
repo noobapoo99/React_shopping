@@ -1,5 +1,4 @@
 import { useContext, useEffect, useState } from "react";
-import SingleProduct from "./SingleProduct.js";
 import { CartContext } from "../Context.js";
 
 const Cart = () => {
@@ -8,12 +7,29 @@ const Cart = () => {
   const { cart, setCart } = useContext(CartContext);
 
   useEffect(() => {
-    setTotal(cart.reduce((acc, curr) => acc + Number(curr.price), 0));
+    setTotal(
+      cart.reduce(
+        (acc, curr) => acc + Number(curr.price) * (curr.quantity || 1),
+        0
+      )
+    );
   }, [cart]);
 
   const removeFromCart = (productId) => {
     const updatedCart = cart.filter((prod) => prod.id !== productId);
     setCart(updatedCart);
+  };
+
+  const updateQuantity = (productId, quantity) => {
+    const updatedCart = cart.map((prod) =>
+      prod.id === productId ? { ...prod, quantity: Number(quantity) } : prod
+    );
+    setCart(updatedCart);
+  };
+
+  const handleCheckout = () => {
+    setCart([]); // Clears the cart
+    alert("Thank you for your purchase!");
   };
 
   return (
@@ -28,6 +44,7 @@ const Cart = () => {
               <th>Product</th>
               <th>Name</th>
               <th>Price</th>
+              <th>Quantity</th>
               <th>Action</th>
             </tr>
           </thead>
@@ -44,6 +61,19 @@ const Cart = () => {
                 </td>
                 <td>{prod.name}</td>
                 <td>Rs.{prod.price}</td>
+                <td>
+                  <select
+                    value={prod.quantity || 1}
+                    onChange={(e) => updateQuantity(prod.id, e.target.value)}
+                    className="select select-bordered w-full max-w-xs"
+                  >
+                    {[...Array(10).keys()].map((x) => (
+                      <option key={x + 1} value={x + 1}>
+                        {x + 1}
+                      </option>
+                    ))}
+                  </select>
+                </td>
                 <td>
                   <button
                     className="btn btn-ghost btn-xs"
@@ -63,15 +93,25 @@ const Cart = () => {
               <th>Total</th>
               <th>Rs.{total}</th>
               <th></th>
+              <th></th>
             </tr>
           </tfoot>
         </table>
       </div>
 
-      {/* Product list section */}
+      {/* Summary section */}
       <div className="flex-1">
         <h2 className="text-xl font-bold mb-4">My Cart</h2>
         <span>Total: Rs.{total}</span>
+        <div className="mt-4">
+          <button
+            className="btn btn-primary"
+            onClick={handleCheckout}
+            disabled={cart.length === 0}
+          >
+            Checkout
+          </button>
+        </div>
       </div>
     </div>
   );
