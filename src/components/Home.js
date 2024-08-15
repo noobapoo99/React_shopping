@@ -14,7 +14,7 @@ const Home = () => {
   return (
     <div className="homePage">
       {/* Filters in the header for mobile */}
-      <header className="header mobile-filter">
+      <header className="header mobile-filter bn ">
         <button
           className="btn open-filter-btn"
           onClick={() => setIsFilterOpen(!isFilterOpen)}

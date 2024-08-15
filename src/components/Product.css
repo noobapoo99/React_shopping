@@ -4,7 +4,7 @@
 .homePage {
   display: flex;
   flex-direction: column;
-  background-color: #f5eded;
+  background-color: #2e3047;
   padding: 20px;
 }
 
@@ -26,7 +26,7 @@
 .header {
   display: none; /* Hidden by default */
   padding: 10px;
-  background-color: #f8f8f8;
+  background-color: #3bba9c;
   text-align: center;
   position: sticky;
   top: 0;
@@ -34,11 +34,18 @@
 }
 
 .open-filter-btn {
-  background-color: #007bff;
+  background-color: #3bba9c;
   color: white;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
+}
+.bn {
+  background-color: #3bba9c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 15px;
 }
 
 /* Sidebar filter styles for larger screens */
