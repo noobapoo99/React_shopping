@@ -20,7 +20,7 @@ const Home = () => {
       </div>
 
       <div className="flex-none gap-2">
-        <div className="flex-1 dropdown">
+        <div className="flex-1 dropdown dropdown-end">
           <Link className="btn btn-ghost text-xl">
             <div className="indicator">
               <svg
@@ -60,14 +60,14 @@ const Home = () => {
             </li>
           </ul>
         </div>
-        <div className="form-control">
+        {/* <div className="form-control">
           <input
             type="text"
             placeholder="Search"
             className="input input-bordered w-24 md:w-auto"
           />
-        </div>
-        <div className="dropdown dropdown-end">
+        </div> */}
+        {/* <div className="dropdown dropdown-end">
           <div
             tabIndex={0}
             role="button"
@@ -98,7 +98,7 @@ const Home = () => {
               <a>Logout</a>
             </li>
           </ul>
-        </div>
+        </div> */}
       </div>
     </div>
   );
