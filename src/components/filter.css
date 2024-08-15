@@ -1,10 +1,13 @@
 .fil {
   margin-top: 20px;
-  background-color: #3bba9c;
+  background-color: #11212d;
   padding: 10px;
   border-radius: 8px;
 }
-
+.sec_1 {
+  background-color: #11212d;
+  color: white;
+}
 /* Center the filters in phone mode */
 @media (max-width: 767px) {
   .homePage {

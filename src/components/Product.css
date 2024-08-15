@@ -4,13 +4,14 @@
 .homePage {
   display: flex;
   flex-direction: column;
-  background-color: #2e3047;
+  background-color: #9babab;
   padding: 20px;
 }
 
 .main-content {
   display: flex;
   width: 100%;
+  color: white;
   flex-direction: column; /* Stack filters and product container on small screens */
 }
 
@@ -27,6 +28,7 @@
   display: none; /* Hidden by default */
   padding: 10px;
   background-color: #3bba9c;
+
   text-align: center;
   position: sticky;
   top: 0;
@@ -34,14 +36,14 @@
 }
 
 .open-filter-btn {
-  background-color: #3bba9c;
+  background-color: #11212d;
   color: white;
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
 }
 .bn {
-  background-color: #3bba9c;
+  background-color: #11212d;
   color: white;
   padding: 10px 20px;
   border: none;

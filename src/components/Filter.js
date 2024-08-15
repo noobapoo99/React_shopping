@@ -54,7 +54,9 @@ function Filters() {
   return (
     <div className="">
       <ul className="menu bg-base-200 rounded-box w-56 fil">
-        <li className="menu-title">Filter</li>
+        <li className="menu-title ">
+          <span className="sec_1">Filter</span>
+        </li>
         <li>
           <span>
             <input
