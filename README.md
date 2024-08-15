@@ -49,19 +49,19 @@ The app will be available at `http://localhost:3000`.
 
 ## Components Overview
 
-### `Home.jsx`
+### `Home.js`
 
 The `Home` component displays the list of products and contains the filter functionality. It features a sidebar filter for larger screens and a dropdown filter for mobile devices.
 
-### `Filters.jsx`
+### `Filters.js`
 
 The `Filters` component allows users to filter products based on stock availability, fast delivery, price, and ratings. The filters adjust dynamically based on user input.
 
-### `SingleProduct.jsx`
+### `SingleProduct.js`
 
 Each product is rendered via the `SingleProduct` component, which displays product information such as name, price, and ratings. Users can add products to their cart from here.
 
-### `Header.jsx`
+### `Header.js`
 
 The `Header` component includes the navigation bar with links to the home page, a cart icon that displays the number of items in the cart, and a dropdown for checkout.
 
