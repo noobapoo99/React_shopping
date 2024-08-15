@@ -2,6 +2,10 @@
 
 This is a responsive React-based shopping cart application. The app displays a list of products, allows users to filter products by various criteria, and manage their cart for checkout. The app is mobile-friendly and features a dynamic filter system for both small and large screens.
 
+# Check The Deployed Site
+
+https://main--comforting-frangollo-f05cee.netlify.app/
+
 ## Features
 
 - **Product Display**: Products are displayed in a grid layout, dynamically adjusted based on the screen size.
@@ -86,10 +90,3 @@ The `Header` component includes the navigation bar with links to the home page, 
 
 This `README.md` file covers the basic structure, installation, and features of your React-based shopping cart application. You can adjust the file with more specific details about your project as it evolves.
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
