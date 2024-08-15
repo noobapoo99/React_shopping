@@ -1,3 +1,6 @@
+# Note
+The data generated is random , please ignore if the image does not matches the product description
+
 # Shopping Cart App
 
 This is a responsive React-based shopping cart application. The app displays a list of products, allows users to filter products by various criteria, and manage their cart for checkout. The app is mobile-friendly and features a dynamic filter system for both small and large screens.
