@@ -1,4 +1,26 @@
 .fil {
   margin-top: 20px;
   background-color: #7fa1c3;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+/* Center the filters in phone mode */
+@media (max-width: 767px) {
+  .homePage {
+    align-items: center; /* Center child elements like Filters */
+  }
+
+  .fil {
+    width: 90%; /* Take up most of the screen width */
+    max-width: 400px; /* Prevent it from becoming too wide */
+  }
+}
+
+/* On medium and larger screens, position the filters normally */
+@media (min-width: 768px) {
+  .fil {
+    width: auto; /* Allow normal width on larger screens */
+    max-width: none; /* Remove width limitation */
+  }
 }

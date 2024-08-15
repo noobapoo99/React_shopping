@@ -1,13 +1,38 @@
 .homePage {
   background-color: #f5eded;
   display: flex;
+  flex-direction: column; /* Stack filters and products on top of each other */
 }
+
+/* Ensure filters take full width on smaller screens */
+@media (min-width: 768px) {
+  .homePage {
+    flex-direction: row; /* Side by side on larger screens */
+  }
+}
+
 .productContainer {
   display: flex;
-
   flex-wrap: wrap;
   justify-content: space-evenly;
+  width: 100%; /* Ensure it takes full width */
 }
+
+/* Adjust product card width for smaller screens */
 .product {
-  margin: 30px;
+  margin: 15px;
+  width: 100%; /* Full width for mobile */
+}
+
+/* On medium to large devices, allow product cards to take up less space */
+@media (min-width: 768px) {
+  .product {
+    width: calc(50% - 30px); /* Two products per row on tablets */
+  }
+}
+
+@media (min-width: 1024px) {
+  .product {
+    width: calc(33.33% - 30px); /* Three products per row on larger screens */
+  }
 }
