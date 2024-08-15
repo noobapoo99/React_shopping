@@ -65,7 +65,7 @@ const Cart = () => {
                   <select
                     value={prod.quantity || 1}
                     onChange={(e) => updateQuantity(prod.id, e.target.value)}
-                    className="select select-bordered w-full max-w-xs hd_col"
+                    className="select select-bordered w-full max-w-xs hd_col_1"
                   >
                     {[...Array(10).keys()].map((x) => (
                       <option key={x + 1} value={x + 1}>

@@ -27,3 +27,7 @@
     max-width: none; /* Remove width limitation */
   }
 }
+.bt_sc {
+  color: #11212d;
+  background-color: #f5eded;
+}

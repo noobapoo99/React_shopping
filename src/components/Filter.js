@@ -110,12 +110,12 @@ function Filters() {
           </span>
         </li>
         <li>
-          <button className="btn sec" onClick={applyFilters}>
+          <button className="btn sec bt_sc" onClick={applyFilters}>
             Apply Filters
           </button>
         </li>
         <li>
-          <button className="btn sec" onClick={clearFilters}>
+          <button className="btn sec bt_sc" onClick={clearFilters}>
             Clear Filters
           </button>
         </li>
