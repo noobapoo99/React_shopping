@@ -8,3 +8,22 @@
 .main_bg {
   background-color: #f5eded;
 }
+/* cart.css */
+
+/* General styling for the select element */
+.select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%; /* Ensure the select box takes the full width */
+}
+
+/* Specific styles for mobile devices */
+@media (max-width: 640px) {
+  .select {
+    font-size: 12px; /* Increase font size on mobile for readability */
+    padding: 12px; /* Increase padding for better tap targets */
+    width: 100%;
+  }
+}
