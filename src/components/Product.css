@@ -1,38 +1,109 @@
+/* Product.css */
+
+/* General styles */
 .homePage {
-  background-color: #f5eded;
   display: flex;
-  flex-direction: column; /* Stack filters and products on top of each other */
+  flex-direction: column;
+  background-color: #f5eded;
+  padding: 20px;
 }
 
-/* Ensure filters take full width on smaller screens */
-@media (min-width: 768px) {
-  .homePage {
-    flex-direction: row; /* Side by side on larger screens */
-  }
+.main-content {
+  display: flex;
+  width: 100%;
+  flex-direction: column; /* Stack filters and product container on small screens */
 }
 
+/* Product container styles */
 .productContainer {
+  flex: 1;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  width: 100%; /* Ensure it takes full width */
 }
 
-/* Adjust product card width for smaller screens */
-.product {
-  margin: 15px;
-  width: 100%; /* Full width for mobile */
+/* Header styles for mobile */
+.header {
+  display: none; /* Hidden by default */
+  padding: 10px;
+  background-color: #f8f8f8;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 10; /* Ensure it's above other content */
 }
 
-/* On medium to large devices, allow product cards to take up less space */
-@media (min-width: 768px) {
+.open-filter-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+}
+
+/* Sidebar filter styles for larger screens */
+.sidebar-filter {
+  display: block;
+  width: 250px;
+  padding: 10px;
+}
+
+/* Mobile view */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+  }
+
+  .sidebar-filter {
+    display: none; /* Hide sidebar filter on mobile */
+  }
+
+  .header {
+    display: block; /* Show mobile header with filter button */
+  }
+
+  .productContainer {
+    flex-direction: column; /* Stack products vertically on mobile */
+    align-items: center; /* Center products horizontally */
+  }
+
   .product {
-    width: calc(50% - 30px); /* Two products per row on tablets */
+    width: 100%; /* Full width for mobile */
+    margin: 15px 0; /* Margin top and bottom */
   }
 }
 
+/* Tablet and larger screens */
+@media (min-width: 768px) {
+  .main-content {
+    flex-direction: row; /* Side by side on larger screens */
+  }
+
+  .productContainer {
+    flex-direction: row; /* Products side by side */
+  }
+
+  .product {
+    width: calc(50% - 30px); /* Two products per row on tablets */
+    margin: 15px; /* Margin around each product */
+  }
+}
+
+/* Desktop and larger screens */
 @media (min-width: 1024px) {
   .product {
     width: calc(33.33% - 30px); /* Three products per row on larger screens */
+  }
+}
+
+/* Extra-large screens */
+@media (min-width: 1440px) {
+  .homePage {
+    padding: 40px;
+  }
+
+  .product {
+    width: calc(25% - 40px); /* Four products per row on extra-large screens */
+    margin: 20px; /* Adjust margin for larger screens */
   }
 }
