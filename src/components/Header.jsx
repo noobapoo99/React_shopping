@@ -42,7 +42,7 @@ const Home = () => {
               </span>
             </div>
           </Link>
-          <ul className="menu dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow">
+          <ul className="menu dropdown-content bg-base-100 rounded-box z-[1] w-52 p-2 shadow mn_col">
             <li>
               <Link to="/cart" className="btn btn-ghost text-xl txt_1">
                 View Cart

@@ -40,18 +40,18 @@ const Cart = () => {
           {/* head */}
           <thead>
             <tr>
-              <th>#</th>
-              <th>Product</th>
-              <th>Name</th>
-              <th>Price</th>
-              <th>Quantity</th>
-              <th>Action</th>
+              <th className="hd_col">#</th>
+              <th className="hd_col">Product</th>
+              <th className="hd_col">Name</th>
+              <th className="hd_col">Price</th>
+              <th className="hd_col">Quantity</th>
+              <th className="hd_col">Action</th>
             </tr>
           </thead>
           <tbody>
             {cart.map((prod, index) => (
               <tr key={prod.id}>
-                <td>{index + 1}</td>
+                <td className="hd_col">{index + 1}</td>
                 <td>
                   <div className="avatar">
                     <div className="mask mask-squircle h-12 w-12">
@@ -59,13 +59,13 @@ const Cart = () => {
                     </div>
                   </div>
                 </td>
-                <td>{prod.name}</td>
-                <td>Rs.{prod.price}</td>
+                <td className="hd_col">{prod.name}</td>
+                <td className="hd_col">Rs.{prod.price}</td>
                 <td>
                   <select
                     value={prod.quantity || 1}
                     onChange={(e) => updateQuantity(prod.id, e.target.value)}
-                    className="select select-bordered w-full max-w-xs"
+                    className="select select-bordered w-full max-w-xs hd_col"
                   >
                     {[...Array(10).keys()].map((x) => (
                       <option key={x + 1} value={x + 1}>
@@ -76,7 +76,7 @@ const Cart = () => {
                 </td>
                 <td>
                   <button
-                    className="btn btn-ghost btn-xs"
+                    className="btn btn-ghost btn-xs hd_col"
                     onClick={() => removeFromCart(prod.id)}
                   >
                     Remove
@@ -90,8 +90,8 @@ const Cart = () => {
             <tr>
               <th></th>
               <th></th>
-              <th>Total</th>
-              <th>Rs.{total}</th>
+              <th className="hd_col">Total</th>
+              <th className="hd_col">Rs.{total}</th>
               <th></th>
               <th></th>
             </tr>
