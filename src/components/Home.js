@@ -1,15 +1,13 @@
-import React, { useContext } from "react";
-import { CartContext, CartState } from "../Context";
+import React from "react";
 import SingleProduct from "./SingleProduct";
 import "./Product.css";
 import Filters from "./Filter";
+import { CartState } from "../Context"; // Only keep necessary imports
 
 const Home = () => {
-  // const { products } = useContext(CartContext);
   const {
     state: { products },
   } = CartState();
-  console.log(products);
 
   return (
     <div className="homePage">
